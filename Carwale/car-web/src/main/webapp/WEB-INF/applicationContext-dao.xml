@@ -25,13 +25,13 @@
 	<context:annotation-config />
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-		<property name="driverClassName"> 
+		<property name="driverClass"> 
 			<value>${connection.driver_class}</value>
 		</property>
-		<property name="url"> 
+		<property name="jdbcUrl"> 
 		<value>${connection.url}</value>
 		</property>
-		<property name="username"> 
+		<property name="user"> 
 		<value>${connection.username}</value>
 		</property>
 		<property name="password">
@@ -55,7 +55,7 @@
       <value>5</value>
     </property>
     <property name="unreturnedConnectionTimeout">
-      <value>50</value>
+      <value>500</value>
     </property>
     <property name="maxStatements" value="2000" />
     <property name="idleConnectionTestPeriod" value="30" />
@@ -106,7 +106,7 @@
 		<property name="basenames">
 			<list>
 				<value>message</value>
-				<value>hibernate</value>
+				<!-- <value>hibernate</value> -->
 			</list>
 		</property>
 	</bean>
